@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--tg-theme-text-color);
+    background: var(--tg-theme-bg-color);
+}
+
+.container {
+    max-width: 390px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 220px 220px 220px 220px 220px;
+}
+
+/* .img {
+    width: 160px;
+    height: 160px;
+    float: left;
+    border-radius: 4px;
+    margin-right: 10px;
+} */
+
+
+
+.product-details {
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+  }
+
+.product-title {
+    font-size: 24px;
+    margin-top: 5px;
+    float: center;
+  }
+  
+  .product-description {
+    font-size: 15px;
+    margin-top: 1px;
+    float: center;
+  }
+  
+  .product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    margin-top: 5px;
+    float: center;
+  }
+
+.item {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    display: block;
+    width: fit-content;
+    padding: 8px 12px;
+    border: none;
+    background:#007bff;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    margin-left: auto;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.btn:hover {
+    background: #FF0000;
+}
+
+.usercard {
+    text-align: center;
+}
