@@ -11,6 +11,10 @@ body {
     justify-content: center;
 }
 
+#container {
+    display: none;
+}
+
 .inner {
   display: grid;
   grid-template-columns: 1fr;
@@ -84,7 +88,7 @@ body {
 }
 
 #form {
-     display: none;
+     display: block;
      text-align: center;
  }
 
