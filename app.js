@@ -1,4 +1,4 @@
-let tg = window.Telegram.WedApp;
+let tg = window.Telegram.WebApp;
 
 tg.expand();
 
