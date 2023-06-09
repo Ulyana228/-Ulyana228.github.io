@@ -68,8 +68,13 @@ btn5.addEventListener("click", function(){
 });
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
-    tg.sendData(item);
-});
+    document.getElementById("container").style.display = "none";
+            document.getElementById("form").style.display = "block";
+            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
+            document.getElementById("product_title").value = item;
+//     tg.sendData(item);
+
+    
 
 let usercard = document.getElementById("usercard");
 
@@ -79,3 +84,46 @@ p.innerText = `${tg.initDataUnsafe.user.first_name}
 ${tg.initDataUnsafe.user.last_name}`; 
 
 usercard.appendChild(p);    
+    
+ sent.addEventListener("click", () => {
+            document.getElementById("error").innerText = '';
+            let title = document.getElementById("product_title").value;
+            let name = document.getElementById("user_name").value;
+            let company = document.getElementById("user_company").value;
+            let mail = document.getElementById("user_mail").value;
+            let phone = document.getElementById("user_phone").value;
+            
+            if (name.length < 2) {
+                document.getElementById("error").innerText = 'Введите корректное ФИО';
+                return;
+            } 
+//поменять длину фио
+            
+            if (company.length < 1) {
+                document.getElementById("error").innerText = 'Если Вы не являетесь представителем какой-либо компании, введите 0';
+                return;
+            }
+            
+            if (mail.length < 7) {
+                document.getElementById("error").innerText = 'Введите корректный адрес электронной почты';
+                return;
+            }
+            
+            if (phone.length < 9) {
+                document.getElementById("error").innerText = 'Введите корректный номер телефона в формате 8ХХХХХХХХХХ';
+                return;
+            }
+      let data = {
+                title: title,
+                name: name,
+                company: company,
+                mail: mail,
+                phone: phone
+            }
+
+            tg.sendData(JSON.stringify(data));
+
+            tg.close();
+     });
+
+
