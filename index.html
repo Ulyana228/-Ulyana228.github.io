@@ -8,11 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="container">
         <div class="inner">
             <div class="item">
                 <div class="product-details">
-                <h3 class="product-title">СЭД «ДЕЛО»</h3>
+                <h3 class="product-title" id="product-title">СЭД «ДЕЛО»</h3>
                 <p class="product-description">Комплексное промышленное решение, обеспечивающее автоматизацию процессов делопроизводства, а также ведение полностью электронного документооборота организации.</p>
                 <span class="product-price">15 300 р.</span>
                 <button class="btn" id="btn1">Заказать</button>
@@ -20,7 +20,7 @@
             </div>
             <div class="item">
                     <div class="product-details">
-                    <h3 class="product-title">СЭД «Архивное дело»</h3>
+                    <h3 class="product-title" id="product-title">СЭД «Архивное дело»</h3>
                     <p class="product-description">Это тиражируемый «коробочный» продукт, реализующий функции архива организации, а также функции делопроизводственных служб в части формирования и оформления дел.</p>
                     <span class="product-price">20 400 р.</span>
                     <button class="btn" id="btn2">Заказать</button>
@@ -28,7 +28,7 @@
             </div>
             <div class="item">
                 <div class="product-details">
-                    <h3 class="product-title">«EOS for SharePoint»</h3>
+                    <h3 class="product-title" id="product-title">«EOS for SharePoint»</h3>
                     <p class="product-description">Продукт, созданный на базе платформы Microsoft SharePoint для автоматизации документооборота и решения управленческих задач.</p>
                     <span class="product-price">9 200 р.</span>
                     <button class="btn" id="btn3">Заказать</button>
@@ -36,7 +36,7 @@
             </div>
             <div class="item">
                 <div class="product-details">
-                    <h3 class="product-title">«EOSmobile»</h3>
+                    <h3 class="product-title" id="product-title">«EOSmobile»</h3>
                     <p class="product-description">Приложение предназначено для взаимодействия пользователей с системами электронного документооборота компании «Электронные Офисные Системы» посредством Android-планшета.</p>
                     <span class="product-price">32 500 р.</span>
                     <button class="btn" id="btn4">Заказать</button>
@@ -44,7 +44,7 @@
             </div>
             <div class="item">
                 <div class="product-details">
-                    <h3 class="product-title"> СКЗИ «КАРМА»</h3>
+                    <h3 class="product-title" id="product-title"> СКЗИ «КАРМА»</h3>
                     <p class="product-description">Это универсальное программное решение для использования криптографических функций, таких как шифрование, подписание и проверка электронной подписи в прикладных клиентских и клиент-серверных приложениях.</p>
                     <span class="product-price">5 700 р.</span>
                     <button class="btn" id="btn5">Заказать</button>
@@ -54,13 +54,14 @@
     </div>
    <div class="usercard" id="usercard"></div>
     <form id="form">
-        <h1>Заполните форму ниже и вскоре мы свяжемся с Вами</h1>
+        <h1>Заполните форму для оформления заказа</h1>
         <input type="text" placeholder="ФИО" id="user_name">
         <input type="text" placeholder="Компания" id="user_company">
         <input type="text" placeholder="Email" id="user_mail">
         <input type="text" placeholder="Телефон" id="user_phone">
+        <input type="text" placeholder="Выбранное ПО" id="product-title">
         <div id="error"></div>
-        <button id="sent">Отправить запрос</button>
+        <button id="sent">Отправить</button>
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="app.js"></script>
