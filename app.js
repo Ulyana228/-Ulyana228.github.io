@@ -72,7 +72,7 @@ Telegram.WebApp.onEvent("mainButtonClicked", function(){
             document.getElementById("form").style.display = "block";
             document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
             document.getElementById("product_title").value = item;
-//     tg.sendData(item);
+    tg.sendData(item);
 
     
 
