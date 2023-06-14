@@ -9,6 +9,7 @@ tg.MainButton.color = "#2cab37";
 order.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
+            document.getElementById("container").style.display = "block";
             document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
         });
 
@@ -52,6 +53,7 @@ sent.addEventListener("click", () => {
 });
 
 sent.addEventListener("click", () => {
+    document.getElementById("main").style.display = "none";
     document.getElementById("form").style.display = "none";
     document.getElementById("container").style.display = "block";
 });
