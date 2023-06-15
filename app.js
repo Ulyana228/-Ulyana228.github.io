@@ -22,22 +22,22 @@ sent.addEventListener("click", () => {
     let mail = document.getElementById("user_mail").value;
     let phone = document.getElementById("user_phone").value;
 
-    if (name.length < 2) {
+    if (name.length < 3) {
         document.getElementById("error").innerText = 'Введите корректное ФИО';
         return;
     }
 
-    if (company.length < 1) {
-        document.getElementById("error").innerText = 'Если Вы не являетесь представителем какой-либо компании, введите 0';
+    if (company.length < 25) {
+        document.getElementById("error").innerText = 'Введите корректное название вашей компании';
         return;
     }
 
-    if (mail.length < 7) {
+    if (mail.length < 15) {
         document.getElementById("error").innerText = 'Введите корректный адрес электронной почты';
         return;
     }
 
-    if (phone.length < 9) {
+    if (phone.length < 11) {
         document.getElementById("error").innerText = 'Введите корректный номер телефона в формате 8ХХХХХХХХХХ';
         return;
     }
