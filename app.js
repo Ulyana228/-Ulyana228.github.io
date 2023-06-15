@@ -20,6 +20,7 @@ sent.addEventListener("click", () => {
     let company = document.getElementById("user_company").value;
     let mail = document.getElementById("user_mail").value;
     let phone = document.getElementById("user_phone").value;
+    let phone = document.getElementById("user_phone").value;       
 
     if (name.length < 3) {
         document.getElementById("error").innerText = 'Введите корректное ФИО';
