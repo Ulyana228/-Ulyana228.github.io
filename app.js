@@ -1,6 +1,7 @@
 let tg = window.Telegram.WebApp;
 let order = document.getElementById("order");
 let sent = document.getElementById("sent");
+let inner = document.getElementById("inner");
 tg.expand();
 
 tg.MainButton.textColor = "#FFFFFF";
