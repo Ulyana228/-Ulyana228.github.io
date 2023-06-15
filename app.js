@@ -16,7 +16,6 @@ order.addEventListener("click", () => {
 
 sent.addEventListener("click", () => {
     document.getElementById("error").innerText = '';
-    let title = document.getElementById("product_title").value;
     let name = document.getElementById("user_name").value;
     let company = document.getElementById("user_company").value;
     let mail = document.getElementById("user_mail").value;
