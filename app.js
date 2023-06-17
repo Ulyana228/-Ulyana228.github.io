@@ -15,6 +15,9 @@ order.addEventListener("click", () => {
         });
 
 sent.addEventListener("click", () => {
+            document.getElementById("main").style.display = "none";
+            document.getElementById("form").style.display = "none";
+            document.getElementById("container").style.display = "block";        
     document.getElementById("error").innerText = '';
     let name = document.getElementById("user_name").value;
     let company = document.getElementById("user_company").value;
@@ -22,22 +25,22 @@ sent.addEventListener("click", () => {
     let phone = document.getElementById("user_phone").value;
     let subscribe = document.getElementById("subscribe").value;       
 
-    if (name.length < 3) {
+    if (name.length < 10) {
         document.getElementById("error").innerText = 'Введите корректное ФИО';
         return;
     }
 
-    if (company.length < 25) {
+    if (company.length < 1) {
         document.getElementById("error").innerText = 'Введите корректное название вашей компании';
         return;
     }
 
-    if (mail.length < 15) {
+    if (mail.length < 7) {
         document.getElementById("error").innerText = 'Введите корректный адрес электронной почты';
         return;
     }
 
-    if (phone.length < 11) {
+    if (phone.length < 10) {
         document.getElementById("error").innerText = 'Введите корректный номер телефона в формате 8ХХХХХХХХХХ';
         return;
     }
@@ -51,12 +54,6 @@ sent.addEventListener("click", () => {
     };
 
     tg.sendData(JSON.stringify(data));
-});
-
-sent.addEventListener("click", () => {
-    document.getElementById("main").style.display = "none";
-    document.getElementById("form").style.display = "none";
-    document.getElementById("container").style.display = "block";
 });
 
 let item = "";
