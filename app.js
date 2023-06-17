@@ -28,15 +28,14 @@ bot.on('callback_query', (query) => {
 // Функции для выполнения JavaScript кода для каждой страницы
 function executeAboutPageJavaScript(chatId) {
 let tg = window.Telegram.WebApp;
-let order = document.getElementById("order");
 tg.expand();
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
-  order.addEventListener("click", () => {
-            document.getElementById("main").style.display = "none";
-            document.getElementById("form").style.display = "block";
-            document.getElementById("container").style.display = "none";
-        });
+
+document.getElementById("main").style.display = "block";
+document.getElementById("form").style.display = "none";
+document.getElementById("container").style.display = "none";
+      
   
 }
 
@@ -46,11 +45,11 @@ let sent = document.getElementById("sent");
 tg.expand();
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
-
+document.getElementById("main").style.display = "none";
+            document.getElementById("form").style.display = "block";
+            document.getElementById("container").style.display = "none";     
   sent.addEventListener("click", () => {
-            document.getElementById("main").style.display = "none";
-            document.getElementById("form").style.display = "none";
-            document.getElementById("container").style.display = "block";        
+               
     document.getElementById("error").innerText = '';
     let name = document.getElementById("user_name").value;
     let company = document.getElementById("user_company").value;
@@ -92,7 +91,6 @@ tg.MainButton.color = "#2cab37";
 
 function executeCataloguePageJavaScript(chatId) {
   let tg = window.Telegram.WebApp;
-
   let container = document.getElementById("container");
   let item = "";
   let btn1 = document.getElementById("btn1");
@@ -103,7 +101,9 @@ function executeCataloguePageJavaScript(chatId) {
   tg.expand();
   tg.MainButton.textColor = "#FFFFFF";
   tg.MainButton.color = "#2cab37";
-
+   document.getElementById("main").style.display = "none";
+            document.getElementById("form").style.display = "none";
+            document.getElementById("container").style.display = "block";
 btn1.addEventListener("click", function () {
     if (tg.MainButton.isVisible) {
         tg.MainButton.hide();
