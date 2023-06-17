@@ -15,6 +15,11 @@ body {
     display: none;
 }
 
+#form {
+    display: none;
+    text-align: center;
+}
+
 .inner {
   display: grid;
   grid-template-columns: 1fr;
@@ -137,11 +142,6 @@ body {
 .usercard {
     text-align: center;
 }
-
-#form {
-     display: block;
-     text-align: center;
- }
 
 input {
       width: 90%;
