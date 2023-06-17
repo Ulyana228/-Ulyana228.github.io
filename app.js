@@ -1,19 +1,53 @@
+
+
+
+// Подключение к API Telegram
+const TelegramBot = require('node-telegram-bot-api');
+const bot = new TelegramBot('5999053915:AAGRsnJHDpeqhIRGSB2bLgBmJs7WT8jk9JQ', { polling: true });
+
+// Обработчик событий нажатия на кнопки
+bot.on('callback_query', (query) => {
+  const buttonData = query.data;
+  const chatId = query.message.chat.id;
+
+  if (buttonData === 'about') {
+    // Выполнение JavaScript кода для страницы "О компании"
+    executeAboutPageJavaScript(chatId);
+  } else if (buttonData === 'form') {
+    // Выполнение JavaScript кода для страницы "Форма обратной связи"
+    executeFormPageJavaScript(chatId);
+  } else if (buttonData === 'catalogue') {
+    // Выполнение JavaScript кода для страницы "Каталог"
+    executeCataloguePageJavaScript(chatId);
+  } else if (buttonData === 'orders') {
+    // Выполнение JavaScript кода для страницы "Мои заказы"
+    executeOrdersPageJavaScript(chatId);
+  }
+});
+
+// Функции для выполнения JavaScript кода для каждой страницы
+function executeAboutPageJavaScript(chatId) {
 let tg = window.Telegram.WebApp;
 let order = document.getElementById("order");
-let sent = document.getElementById("sent");
-let container = document.getElementById("container");
 tg.expand();
-
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
-
-order.addEventListener("click", () => {
+  order.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
             document.getElementById("container").style.display = "none";
         });
+  
+}
 
-sent.addEventListener("click", () => {
+function executeFormPageJavaScript(chatId) {
+let tg = window.Telegram.WebApp;
+let sent = document.getElementById("sent");
+tg.expand();
+tg.MainButton.textColor = "#FFFFFF";
+tg.MainButton.color = "#2cab37";
+
+  sent.addEventListener("click", () => {
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "none";
             document.getElementById("container").style.display = "block";        
@@ -54,13 +88,21 @@ sent.addEventListener("click", () => {
 
     tg.sendData(JSON.stringify(data));
 });
+}
 
-let item = "";
-let btn1 = document.getElementById("btn1");
-let btn2 = document.getElementById("btn2");
-let btn3 = document.getElementById("btn3");
-let btn4 = document.getElementById("btn4");
-let btn5 = document.getElementById("btn5");
+function executeCataloguePageJavaScript(chatId) {
+  let tg = window.Telegram.WebApp;
+
+  let container = document.getElementById("container");
+  let item = "";
+  let btn1 = document.getElementById("btn1");
+  let btn2 = document.getElementById("btn2");
+  let btn3 = document.getElementById("btn3");
+  let btn4 = document.getElementById("btn4");
+  let btn5 = document.getElementById("btn5");  
+  tg.expand();
+  tg.MainButton.textColor = "#FFFFFF";
+  tg.MainButton.color = "#2cab37";
 
 btn1.addEventListener("click", function () {
     if (tg.MainButton.isVisible) {
@@ -120,6 +162,13 @@ let usercard = document.getElementById("usercard");
 let p = document.createElement("p");
 p.innerText = `${tg.initDataUnsafe.user.first_name} ${tg.initDataUnsafe.user.last_name}`;
 usercard.appendChild(p);
+}
+
+function executeOrdersPageJavaScript(chatId) {
+  // Ваш JavaScript код для страницы "Мои заказы"
+  bot.sendMessage(chatId, 'JavaScript код для страницы "Мои заказы"');
+}
+
    
      
 
