@@ -46,9 +46,8 @@ let sent = document.getElementById("sent");
 tg.expand();
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
-document.getElementById("main").style.display = "none";
-            document.getElementById("form").style.display = "block";
-            document.getElementById("container").style.display = "none";     
+  hideOtherPages();
+  showPage('form');     
   sent.addEventListener("click", () => {
                
     document.getElementById("error").innerText = '';
@@ -78,8 +77,6 @@ document.getElementById("main").style.display = "none";
         return;
     }
 
-  hideOtherPages();
-  showPage('form');
     
     let data = {
         title: title,
