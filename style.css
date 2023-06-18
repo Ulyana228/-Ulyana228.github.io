@@ -11,11 +11,6 @@ body {
     justify-content: flex-end;
 }
 
-#container {
-    display: block;
-    text-align: left ;
-}
-
 .inner {
   display: grid;
   grid-template-columns: 1fr;
