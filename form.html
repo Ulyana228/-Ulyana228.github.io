@@ -70,8 +70,10 @@ input:focus {
         <input type="text" placeholder="Телефон" id="user_phone">
         <div id="error"></div>
         <div>
-        <label for="subscribe">Согласие на обработку персональных данных:</label>
         <input type="checkbox" id="subscribe" name="subscribe">
+        <label for="subscribe">
+          <a href="https://www.consultant.ru/document/cons_doc_LAW_61801/" target="_blank">Предоставляю согласие на обработку персональных данных</a>
+        </label>
         </div>
         <button id="sent">Отправить</button>
     </form>
@@ -85,6 +87,7 @@ input:focus {
     tg.MainButton.textColor = "#FFFFFF";
     tg.MainButton.color = "#2cab37";
     
+        
     sent.addEventListener("click", () => {       
             document.getElementById("error").innerText = '';
             
