@@ -79,6 +79,7 @@ p {
         <input type="text" placeholder="Компания" id="user_company">
         <input type="text" placeholder="Email" id="user_mail">
         <input type="text" placeholder="Телефон" id="user_phone">
+        <input type="text" placeholder="Задайте интересующий вас вопрос" id="user_text">
         <div id="error"></div>
         <div id="agree">
         <input type="checkbox" id="subscribe" name="subscribe">
@@ -106,6 +107,7 @@ p {
     let company = document.getElementById("user_company").value;
     let mail = document.getElementById("user_mail").value;
     let phone = document.getElementById("user_phone").value;
+    let user_text = document.getElementById("user_text").value;
     let subscribe = document.getElementById("subscribe").value;       
     if (name.length < 10) {
         document.getElementById("error").innerText = 'Введите корректное ФИО';
@@ -123,12 +125,19 @@ p {
         document.getElementById("error").innerText = 'Введите корректный номер телефона в формате 8ХХХХХХХХХХ';
         return;
     }
+
+    if (user_text.length < 1) {
+        document.getElementById("error").innerText = 'Введити ваш вопрос';
+        return;
+    }
+        
     let data = {
         title: title,
         name: name,
         company: company,
         mail: mail,
-        phone: phone
+        phone: phone,
+        user_text: user_text
     };
     tg.sendData(JSON.stringify(data));
 });
