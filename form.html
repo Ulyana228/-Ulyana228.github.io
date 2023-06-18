@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<!--     <link rel="stylesheet" href="style.css"> -->
     <title>Document</title>
 </head>
 <body>
+    <style>
+        body { display: block;
+        }
+    </style>
     <title>Форма обратной связи</title>
         <form id="form">
         <h1>Заполните форму для оформления заказа</h1>
@@ -32,10 +36,7 @@
     tg.MainButton.textColor = "#FFFFFF";
     tg.MainButton.color = "#2cab37";
     
-    sent.addEventListener("click", () => {
-            document.getElementById("main").style.display = "none";
-            document.getElementById("form").style.display = "none";
-            document.getElementById("container").style.display = "block";        
+    sent.addEventListener("click", () => {       
             document.getElementById("error").innerText = '';
             
     let name = document.getElementById("user_name").value;
