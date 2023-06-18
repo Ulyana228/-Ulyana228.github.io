@@ -35,11 +35,13 @@ tg.MainButton.color = "#2cab37";
 function hideOtherPages() {
   document.getElementById("about").style.display = "none";
   document.getElementById("form").style.display = "none";
-  document.getElementById("catalogue").style.display = "none";
-}
-
+  document.getElementById("catalogue").style.display = "none";  
+  
   hideOtherPages();
   showPage('about');
+}
+
+
   
 }
 
