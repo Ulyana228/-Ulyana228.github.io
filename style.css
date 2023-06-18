@@ -7,12 +7,12 @@ body {
 
 .container {
     max-width: 390px;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 #container {
     display: block;
-    text-align: center;
+    text-align: left ;
 }
 
 .inner {
