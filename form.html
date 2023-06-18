@@ -79,7 +79,7 @@ p {
         <input type="text" placeholder="Компания" id="user_company">
         <input type="text" placeholder="Email" id="user_mail">
         <input type="text" placeholder="Телефон" id="user_phone">
-        <input type="text" placeholder="Задайте вопрос" id="question">
+        <input type="text" placeholder="Задайте вопрос" id="user_question">
         <div id="error"></div>
         <div id="agree">
         <input type="checkbox" id="subscribe" name="subscribe">
@@ -107,7 +107,7 @@ p {
     let company = document.getElementById("user_company").value;
     let mail = document.getElementById("user_mail").value;
     let phone = document.getElementById("user_phone").value;
-    let question = document.getElementById("question").value;
+    let question = document.getElementById("user_question").value;
     let subscribe = document.getElementById("subscribe").value;       
     if (name.length < 10) {
         document.getElementById("error").innerText = 'Введите корректное ФИО';
