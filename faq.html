@@ -1,7 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Часто задаваемые вопросы</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Часто задаваемые вопросы</title>
+</head>
+<body>
   <style>
     body {
   font-family: Arial, sans-serif;
@@ -55,21 +60,6 @@ h1 {
 
 
   </style>
-    <script>
-    function toggleAnswer(event) {
-      const answer = event.target.nextElementSibling;
-      answer.classList.toggle('show');
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const questions = document.querySelectorAll('.question');
-      questions.forEach(function(question) {
-        question.addEventListener('click', toggleAnswer);
-      });
-    });
-  </script>
-</head>
-<body>
   <h1>Часто задаваемые вопросы</h1>
 
   <div class="faq">
@@ -144,9 +134,19 @@ h1 {
         
          полностью реализовать свой потенциал и достичь своих бизнес-целей.
     </div>
-
-    <!-- Добавьте больше вопросов и ответов по вашему усмотрению -->
-
   </div>
+   <script>
+    function toggleAnswer(event) {
+      const answer = event.target.nextElementSibling;
+      answer.classList.toggle('show');
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const questions = document.querySelectorAll('.question');
+      questions.forEach(function(question) {
+        question.addEventListener('click', toggleAnswer);
+      });
+    });
+  </script>
 </body>
 </html>
