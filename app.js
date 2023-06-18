@@ -35,7 +35,8 @@ tg.MainButton.color = "#2cab37";
 document.getElementById("main").style.display = "block";
 document.getElementById("form").style.display = "none";
 document.getElementById("container").style.display = "none";
-      
+  hideOtherPages();
+  showPage('about');
   
 }
 
@@ -77,6 +78,9 @@ document.getElementById("main").style.display = "none";
         return;
     }
 
+  hideOtherPages();
+  showPage('form');
+    
     let data = {
         title: title,
         name: name,
@@ -162,6 +166,9 @@ let usercard = document.getElementById("usercard");
 let p = document.createElement("p");
 p.innerText = `${tg.initDataUnsafe.user.first_name} ${tg.initDataUnsafe.user.last_name}`;
 usercard.appendChild(p);
+
+  hideOtherPages();
+  showPage('catalogue');
 }
 
 function executeOrdersPageJavaScript(chatId) {
