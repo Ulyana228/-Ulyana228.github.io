@@ -21,7 +21,7 @@
             display: block;
         }
 
-        #user_name, #user_company, #user_mail, #user_phone {
+        #user_name, #user_company, #user_mail, #user_phone, #user_question {
             width: 90%;
             outline: none;
             margin: 10px 5%;
@@ -79,7 +79,7 @@ p {
         <input type="text" placeholder="Компания" id="user_company">
         <input type="text" placeholder="Email" id="user_mail">
         <input type="text" placeholder="Телефон" id="user_phone">
-        <input type="text" placeholder="Задайте интересующий вас вопрос" id="user_text">
+        <input type="text" placeholder="Задайте вопрос" id="question">
         <div id="error"></div>
         <div id="agree">
         <input type="checkbox" id="subscribe" name="subscribe">
@@ -107,7 +107,7 @@ p {
     let company = document.getElementById("user_company").value;
     let mail = document.getElementById("user_mail").value;
     let phone = document.getElementById("user_phone").value;
-    let user_text = document.getElementById("user_text").value;
+    let question = document.getElementById("question").value;
     let subscribe = document.getElementById("subscribe").value;       
     if (name.length < 10) {
         document.getElementById("error").innerText = 'Введите корректное ФИО';
@@ -126,7 +126,7 @@ p {
         return;
     }
 
-    if (user_text.length < 1) {
+    if (question.length < 1) {
         document.getElementById("error").innerText = 'Введити ваш вопрос';
         return;
     }
@@ -137,7 +137,7 @@ p {
         company: company,
         mail: mail,
         phone: phone,
-        user_text: user_text
+        question: question
     };
     tg.sendData(JSON.stringify(data));
 });
