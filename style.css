@@ -37,13 +37,13 @@ body {
 .product-title {
   font-size: 24px;
   margin-top: 5px;
-  padding-left: 10px; 
+  margin-left: 15px;
 }
 
 .product-description {
   font-size: 13px;
   margin-top: 1px;
-  padding-left: 10px;
+  margin-left: 15px;
 }
 
 .product-price {
@@ -51,7 +51,7 @@ body {
   font-weight: bold;
   color: #555;
   margin-top: auto;
-   padding-left: 10px;
+   margin-left: 15px;
 }
 
 .btn {
