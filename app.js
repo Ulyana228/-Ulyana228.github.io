@@ -50,11 +50,12 @@ btn5.addEventListener("click", function () {
     if (tg.MainButton.isVisible) {
         tg.MainButton.hide();
     } else {
-        tg.MainButton.setText("Вы выбрали услугу «Система криптографического обеспечения КАРМА!»");
+        tg.MainButton.setText("Система криптографического обеспечения КАРМА!");
         item = "5";
         tg.MainButton.show();
     }
 });
+
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
     tg.sendData(item);
 });
