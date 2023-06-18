@@ -1,6 +1,5 @@
 let tg = window.Telegram.WebApp;
 let order = document.getElementById("order");
-let sent = document.getElementById("sent");
 let container = document.getElementById("container");
 tg.expand();
 tg.MainButton.textColor = "#FFFFFF";
@@ -11,42 +10,6 @@ order.addEventListener("click", () => {
             document.getElementById("container").style.display = "none";
             document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
         });
-
-sent.addEventListener("click", () => {
-            document.getElementById("main").style.display = "none";
-            document.getElementById("form").style.display = "none";
-            document.getElementById("container").style.display = "block";        
-    document.getElementById("error").innerText = '';
-    let name = document.getElementById("user_name").value;
-    let company = document.getElementById("user_company").value;
-    let mail = document.getElementById("user_mail").value;
-    let phone = document.getElementById("user_phone").value;
-    let subscribe = document.getElementById("subscribe").value;       
-    if (name.length < 10) {
-        document.getElementById("error").innerText = 'Введите корректное ФИО';
-        return;
-    }
-    if (company.length < 1) {
-        document.getElementById("error").innerText = 'Введите корректное название вашей компании';
-        return;
-    }
-    if (mail.length < 7) {
-        document.getElementById("error").innerText = 'Введите корректный адрес электронной почты';
-        return;
-    }
-    if (phone.length < 10) {
-        document.getElementById("error").innerText = 'Введите корректный номер телефона в формате 8ХХХХХХХХХХ';
-        return;
-    }
-    let data = {
-        title: title,
-        name: name,
-        company: company,
-        mail: mail,
-        phone: phone
-    };
-    tg.sendData(JSON.stringify(data));
-});
 let item = "";
 let btn1 = document.getElementById("btn1");
 let btn2 = document.getElementById("btn2");
