@@ -129,14 +129,14 @@ p {
         return;
     }
         
-    let data_form = {
+    let data = {
         name: name,
         company: company,
         mail: mail,
         phone: phone,
         question: question
     };
-    tg.sendData(JSON.stringify(data_form));
+    tg.sendData(JSON.stringify(data));
     tg.close();
 });
     </script>
